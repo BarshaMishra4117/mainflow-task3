@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+#home {
+    background-image: url('https://picsum.photos/2000/800');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#home h1 {
+    font-size: 3em;
+}
+
+#destinations {
+    padding: 2em;
+}
+
+#destinations ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#destinations li {
+    margin-bottom: 20px;
+}
+
+#destinations h3 {
+    font-size: 1.5em;
+}
+.new p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+  .new img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5em;
+  }
+.paris p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+.paris img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5em;
+}
+.tokyo p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+  .tokyo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5em;
+  }
+#about {
+    padding: 2em;
+}
+
+#about p {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+ <section id="home">
+    <h1>Welcome to Our Travel Website!</h1>
+    <p>Explore the world with us!</p>
+    <img src="https://picsum.photos/2000/800" alt="Travel Image">
+</section>
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .header {
+        font-size: 1.5em;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+    .destinations,
+    .about {
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header {
+        font-size: 1.2em;
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .destinations,
+    .about{
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 1em;
+    }
+}

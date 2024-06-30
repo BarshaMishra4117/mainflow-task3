@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Our Travel Website!</h1>
+        <p>Explore the world with us!</p>
+        <img src="https://picsum.photos/2000/800" alt="Travel Image">
+    </section>
+
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+        <ul>
+            <li>
+                <h3>New York City</h3>
+                <p>A city that never sleeps!</p>
+                <img src="new-image.jpg" alt="New Image">
+            </li>
+            <li>
+                <h3>Paris</h3>
+                <p>The City of Love!</p>
+                <img src="paris-image.jpg" alt="Paris Image">
+            </li>
+            <li>
+                <h3>Tokyo</h3>
+                <p>A city of neon lights!</p>
+                <img src="tokyo-image.jpg" alt="Tokyo Image">
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a team of travel enthusiasts dedicated to helping you explore the world!</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Travel Website</p>
+    </footer>
+
+    <script>
+        // Form validation
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            
+            if (nameInput.value.trim() === '') {
+                alert('Please enter your name.');
+                return;
+            }
+            
+            if (emailInput.value.trim() === '') {
+                alert('Please enter your email.');
+                return;
+            }
+            
+            if (messageInput.value.trim() === '') {
+                alert('Please enter your message.');
+                return;
+            }
+            
+            // If all fields are valid, submit the form
+            form.submit();
+        });
+        
+        // Interactive menu
+        const menuLinks = document.querySelectorAll('nav a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetSection = document.querySelector(event.target.getAttribute('href'));
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
